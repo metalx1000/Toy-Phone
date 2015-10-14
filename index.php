@@ -61,8 +61,11 @@
           call();
         }
       });
+
+      $("#call").click(call);
     });
 
+    
     function call(){
       var person = people[0];
       var snd = document.createElement('audio');
@@ -106,7 +109,7 @@
     <a href="#" class="num btn btn-primary">0</a>
     <a href="#" class="num btn btn-primary">#</a>
   </div>
-  <button type="button" class="call btn btn-primary btn-block item">Call</button>
+  <button type="button" id="call" class="call btn btn-primary btn-block item">Call</button>
 </div>
 
 </body>
