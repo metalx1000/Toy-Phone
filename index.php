@@ -21,10 +21,21 @@
   <script>
     $(document).ready(function(){
       $(".num").click(function(){
+        play("dial1.wav");
         var num = $(this).html();
         $("#display").append(num);
       });
     });
+
+    function play(snd){
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', 'sounds/'+snd);
+        audioElement.setAttribute('autoplay', 'autoplay');
+        
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
+        }, true);
+    }
   </script>
 </head>
 <body>
@@ -53,3 +64,6 @@
   </div>
   <button type="button" class="call btn btn-primary btn-block item">Call</button>
 </div>
+
+</body>
+</html>
