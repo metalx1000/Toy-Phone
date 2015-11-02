@@ -42,7 +42,8 @@
     }
   </style>
   <script>
-    var people = [ "Dada.1.ogg" ]
+    var people = [ "Dada.1.ogg", "Dada.2.ogg" ];
+    var snd = document.createElement('audio');
     //var dial = loadAudio('sounds/dial1.ogg');
     var dial = new Howl({
       urls: ['sounds/dial1.ogg']
@@ -72,8 +73,8 @@
     }
     
     function call(){
-      var person = people[0];
-      var snd = document.createElement('audio');
+      snd.pause();
+      var person = people[Math.floor(Math.random()*people.length)];;
       snd.setAttribute('src', 'people/' + person);
       snd.setAttribute('autoplay', 'autoplay');
       snd.play();      
