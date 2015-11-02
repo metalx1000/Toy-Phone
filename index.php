@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+  <script src="lib/howler.min.js"></script>
 <!--favicon-->
 <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-touch-icon-60x60.png">
@@ -43,11 +43,10 @@
   </style>
   <script>
     var people = [ "Dada.1.ogg" ]
-    var dial = document.createElement('audio');
-    dial.setAttribute('src', 'sounds/dial1.ogg');
-    dial.setAttribute('autoplay', 'autoplay');
-    dial.play();
-    dial.pause();
+    //var dial = loadAudio('sounds/dial1.ogg');
+    var dial = new Howl({
+      urls: ['sounds/dial1.ogg']
+    });
 
     $(document).ready(function(){
       $(".num").click(function(){
@@ -65,6 +64,12 @@
       $("#call").click(call);
     });
 
+    function loadAudio(uri){
+        var audio = new Audio();
+        //audio.addEventListener('canplaythrough', isAppLoaded, false); // It works!!
+        audio.src = uri;
+        return audio;
+    }
     
     function call(){
       var person = people[0];
