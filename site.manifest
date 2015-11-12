@@ -1,12 +1,13 @@
 CACHE MANIFEST
 
-# version 1447341109
+# version 1447341246
 
 ./people/Dada.2.ogg
 ./people/Mama.2.ogg
 ./people/Dada.1.ogg
 ./people/Mama.1.ogg
 ./README.md
+./css/bootstrap.min.css
 ./LICENSE
 ./index.php
 ./master.zip
