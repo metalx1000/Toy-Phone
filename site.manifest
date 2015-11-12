@@ -47,3 +47,6 @@ CACHE MANIFEST
 ./sounds/ring1.ogg
 ./sounds/dial1.ogg
 ./sounds/dial1.wav
+
+NETWORK:
+*
