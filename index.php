@@ -43,6 +43,7 @@
   </style>
   <script>
     var people = [ "Dada.1.ogg", "Dada.2.ogg", "Mama.1.ogg", "Mama.2.ogg" ];
+    var voices = [];
     var snd = document.createElement('audio');
     //var dial = loadAudio('sounds/dial1.ogg');
     var dial = new Howl({
@@ -50,7 +51,8 @@
     });
 
     for(var i=0;i<people.length;i++){
-      new Howl({urls: [ 'people/' + people[i] ]});
+      var p = new Howl({urls: [ 'people/' + people[i] ]});
+      voices.push(p);
     }
 
     $(document).ready(function(){
@@ -78,15 +80,20 @@
     
     function call(){
       snd.pause();
+/*
       var person = people[Math.floor(Math.random()*people.length)];;
       snd.setAttribute('src', 'people/' + person);
       snd.setAttribute('autoplay', 'autoplay');
+*/
+      snd = voices[Math.floor(Math.random()*voices.length)];
       snd.play();      
 
-      var name = person.split(".");
-      $("#display").html("Calling " + name[0]);
+      var name = snd._urls[0].split(".");
+      name = name[0].split("/");
+      name = name[1];
+      $("#display").html("Calling " + name);
       setTimeout(function(){
-        $("#display").html(name[0]);
+        $("#display").html(name);
       },1000);
 
       setTimeout(function(){
