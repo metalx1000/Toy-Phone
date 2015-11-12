@@ -49,6 +49,10 @@
       urls: ['sounds/dial1.ogg']
     });
 
+    for(var i=0;i<people.length;i++){
+      new Howl({urls: [ 'people/' + people[i] ]});
+    }
+
     $(document).ready(function(){
       $(".num").click(function(){
         dial.play();
