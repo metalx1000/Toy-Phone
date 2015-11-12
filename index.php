@@ -42,7 +42,9 @@
     }
   </style>
   <script>
-    var people = [ "Dada.1.ogg", "Dada.2.ogg", "Mama.1.ogg", "Mama.2.ogg" ];
+    //var people = [ "Dada.1.ogg", "Dada.2.ogg", "Mama.1.ogg", "Mama.2.ogg" ];
+    var people = "<?php include('people.php');?>";
+    people = people.split(";");
     var voices = [];
     var snd = document.createElement('audio');
     //var dial = loadAudio('sounds/dial1.ogg');
