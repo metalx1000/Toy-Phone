@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html >
+<html lang="en" manifest="site.manifest">
 <head>
   <title>Toy Phone</title>
   <meta charset="utf-8">
