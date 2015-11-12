@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# version 1447341246
+# version 1447341368
 
 ./people/Dada.2.ogg
 ./people/Mama.2.ogg
@@ -42,11 +42,11 @@ CACHE MANIFEST
 ./lib/package.json
 ./lib/bower.json
 ./lib/CHANGELOG.md
+./lib/jquery.min.js
 ./lib/howler.min.js
 ./lib/LICENSE.md
+./lib/bootstrap.min.js
 ./lib/howler.js
 ./sounds/ring1.ogg
 ./sounds/dial1.ogg
 ./sounds/dial1.wav
-./libs/jquery.min.js
-./libs/bootstrap.min.js
