@@ -1,6 +1,6 @@
 CACHE MANIFEST
 
-# version 1447340171
+# version 1447341109
 
 ./people/Dada.2.ogg
 ./people/Mama.2.ogg
@@ -47,6 +47,5 @@ CACHE MANIFEST
 ./sounds/ring1.ogg
 ./sounds/dial1.ogg
 ./sounds/dial1.wav
-
-NETWORK:
-*
+./libs/jquery.min.js
+./libs/bootstrap.min.js
